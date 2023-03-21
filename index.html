@@ -9,16 +9,37 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>El Burras</title>
-
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
-
+<body onload=display_ct();>
     <header>
-        Hola
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="./imagenes/Logo.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
+                EL BURRAS
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Promocion</a>
+                    </li>
+                </ul>
+                <button type="button" id="botonDisponibilidad" class="btn" data-toggle="modal"
+                    data-target="#modalAbiertoCerrado"></button>
+            </div>
+        </nav>
     </header>
-    <footer>Adios</footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -33,6 +54,95 @@
         crossorigin="anonymous"></script>
 
     <script src="js/script.js"></script>
+
+    <!-- Modal Cerrado/Abierto -->
+    <div class="modal fade" id="modalAbiertoCerrado" tabindex="-1" role="dialog" aria-labelledby="modalDisponibilidad"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDisponibilidad">Disponibilidad</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card text-center text-white bg-info">
+                        <div class="card-body">
+                            <p class="card-text" id="textoAbiertoCerrado"></p>
+                        </div>
+                    </div>
+                    <span id='ct'></span>
+                    <div id="horarioAtencion">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between" id="1">
+                                <div>
+                                    Lunes
+                                </div>
+                                <div>
+                                    5:00 pm - 11:00 pm
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between" id="2">
+                                <div>
+                                    Martes
+                                </div>
+                                <div>
+                                    CERRADO
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between" id="3">
+                                <div>
+                                    Miercoles
+                                </div>
+                                <div>
+                                    5:00 pm - 11:00 pm
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between" id="4">
+                                <div>
+                                    Jueves
+                                </div>
+                                <div>
+                                    5:00 pm - 11:00 pm
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between" id="5">
+                                <div>
+                                    Viernes
+                                </div>
+                                <div>
+                                    5:00 pm - 11:00 pm
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between" id="6">
+                                <div>
+                                    Sabado
+                                </div>
+                                <div>
+                                    5:00 pm - 11:00 pm
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between" id="7">
+                                <div>
+                                    Domingo
+                                </div>
+                                <div>
+                                    5:00 pm - 11:00 pm
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tipoServicio" class="d-flex justify-content-between">
+                        <div>
+                            Consumo en el lugar
+                        </div>
+                        <div>Retiro en el negocio</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
