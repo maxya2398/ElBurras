@@ -181,9 +181,9 @@ text-align: center;
     .carousel_elemento{
         padding: 1rem;
     }
-    .carousel_elemento img{
-        height: 100%;
-    }
+    /* .carousel_elemento img{
+        object-fit: fill;
+    } */
 /* IMAGENES FIN */
 
 

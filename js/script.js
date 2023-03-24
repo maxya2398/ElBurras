@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     display_ct();
     platillos();
     new Glider(document.querySelector('.carousel__lista'), {
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         draggable: true,
         arrows: {
             prev: '.carousel__anterior',
