@@ -15,6 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@700&family=Mulish:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+    <link href="
+    https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css
+    " rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -51,26 +54,14 @@
             </div>
         </nav>
     </header>
-    <!--CHECAR SI SE QUIERE 
-        <section class="home" id="home">
-        <div class="controls">
-            <span class="vid-btn active" data-src="imagenes/videos/vid1.mp4"></span>
-            <span class="vid-btn" data-src="imagenes/videos/vid2.mp4"></span>
-            <span class="vid-btn" data-src="imagenes/videos/vid3.mp4"></span>
-        </div>
-        <div class="video-container">
-            <video src="imagenes/videos/vid1.mp4" id="video-slider" loop autoplay muted></video>
-        </div>
-    </section> -->
     <div class="contenedor-inicio container" id="contenedor-inicio">
         <div class="texto-nosotros">
             <p class="bienvenido">Bienvenido a!</p>
             <h1>El Burras</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem laboriosam exercitationem ad, cupiditate
-                possimus quae recusandae consectetur eligendi rerum, dignissimos iste, dolore quas quis eveniet incidunt
-                quisquam aliquam iusto libero. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, iusto
-                eligendi! Iure minima asperiores eius non in, quod libero ipsam voluptatibus magni neque iste molestiae
-                ad vitae dolorem laboriosam officia!</p>
+            <p>El Burras es el lugar indicado para disfrutar de una buena comida. Disfruta de nuestros excelentes
+                platillos a un precio fantástico. Deleitate con nuestro menú y sus diferentes variedades para elegir,
+                desde un Burrito hasta una Torta, todo con los mejores ingredientes y la más alta calidad. Te esperamos!
+            </p>
         </div>
         <div class="imagenes-nosotros">
             <div class="imagen1">
@@ -88,7 +79,6 @@
     <section class="menu container" id="menu">
         <h2 class="texto-platillos">Menú</h2>
         <div class="botones-platillos">
-            <button type="button" class="btn btn-secondary todos">Todos</button>
             <button type="button" class="btn btn-secondary burritosBtn">Burritos</button>
             <button type="button" class="btn btn-secondary gringasBtn">Gringas</button>
             <button type="button" class="btn btn-secondary tacosBtn">Tacos</button>
@@ -315,24 +305,30 @@
             <span>Í</span>
             <span>A</span>
         </h1>
-        <div class="box-container">
-            <div class="box">
-                <img data-src="imagenes/MenuBurritos.jpeg" alt="" />
-            </div>
-            <div class="box">
-                <img data-src="imagenes/MenuGringas.jpeg"" />
-            </div>
-            <div class=" box">
-                <img data-src="imagenes/MenuTacos.jpeg" alt="" />
-            </div>
-            <div class="box">
-                <img data-src="imagenes/MenuTortas.jpeg" alt="" />
-            </div>
-            <div class="box">
-                <img data-src="imagenes/ComidaTorta.jpeg" alt="" />
-            </div>
-            <div class="box">
-                <img data-src="imagenes/ComidaTacos.jpg" alt="" />
+        <div class="container">
+            <div class="carousel__contenedor">
+                <button aria-label="Anterior" class="carousel__anterior"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel__lista">
+                    <div class="carousel_elemento">
+                        <img data-src="imagenes/MenuBurritos.jpeg" alt="" />
+                    </div>
+                    <div class="carousel_elemento">
+                        <img data-src="imagenes/MenuGringas.jpeg" />
+                    </div>
+                    <div class="carousel_elemento">
+                        <img data-src="imagenes/MenuTacos.jpeg" alt="" />
+                    </div>
+                    <div class="carousel_elemento">
+                        <img data-src="imagenes/MenuTortas.jpeg" alt="" />
+                    </div>
+                    <div class="carousel_elemento">
+                        <img data-src="imagenes/Tortas.jpg" alt="" />
+                    </div>
+                    <div class="carousel_elemento">
+                        <img data-src="imagenes/ComidaTacos.jpg" alt="" />
+                    </div>
+                </div>
+                <button aria-label="Siguiente" class="carousel__siguiente"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
@@ -340,13 +336,24 @@
     <div class="pie-pagina" id="contacto">
         <div class="contenedor-piepagina container ">
             <div class="info">
+                <h3>Mapa</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15143.624616445517!2d-93.2155053!3d18.3971218!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ee8df6d0e67cf9%3A0xf448f43cf86914d4!2sEl%20Burras!5e0!3m2!1sen!2smx!4v1679613635497!5m2!1sen!2smx"
+                    width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="info">
                 <h3>Direccion</h3>
-                <p><i class="fas fa-map-marker-alt"></i> C. Hermenegildo Galeana 503 Paraiso, Tabasco 86600 Paraíso,
+                <p><i class="fas fa-map-marker-alt"></i> C. Hermenegildo Galeana 503 Paraiso, <br>Tabasco 86600 Paraíso,
                     Tabasco, Mexico</p>
             </div>
             <div class="info">
                 <h3>Celular</h3>
-                <p><i class="fas fa-phone-alt"></i> 933 406 1286</p>
+                <p>
+                    <a href="tel:9334061286" style="text-decoration: none; color: white;">
+                        <i class="fas fa-phone-alt"></i>933 406 1286
+                    </a>
+                </p>
             </div>
             <div class="info">
                 <h3>Contacto</h3>
@@ -354,7 +361,7 @@
                     <a href="https://www.facebook.com/Elburras03" target="_blank">
                         <i class="fab fa-facebook-square"> </i>
                     </a>
-                    <a href="https://wa.me/529931773760" target="_blank">
+                    <a href="https://wa.me/529334061286" target="_blank">
                         <i class="fab fa-whatsapp-square"></i>
                     </a>
 
@@ -365,8 +372,10 @@
     <footer class="footer">
         <p>Todos los derechos reservados &copy; 2023. El Burras</p>
     </footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="
+        https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.js
+            "></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

@@ -1,7 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     display_ct();
     platillos();
+    new Glider(document.querySelector('.carousel__lista'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: true,
+        arrows: {
+            prev: '.carousel__anterior',
+            next: '.carousel__siguiente'
+        },
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    draggable: true,
+                }
+            }
+        ]
+    });
 })
+
+
 function display_c() {
     var refresh = 1000; // Refresh rate in milli seconds
     mytime = setTimeout('display_ct()', refresh)
@@ -26,7 +47,6 @@ function display_ct() {
 }
 
 const imagenes = document.querySelectorAll('img');
-const btnTodos = document.querySelector('.todos');
 const btnBurritos = document.querySelector('.burritosBtn');
 const btnGringas = document.querySelector('.gringasBtn');
 const btnTacos = document.querySelector('.tacosBtn');
@@ -47,9 +67,11 @@ const platillos = () => {
     const gringas = platillosArreglo.filter(gringa => gringa.getAttribute('data-platillo') === 'gringa');
     const tacos = platillosArreglo.filter(tacos => tacos.getAttribute('data-platillo') === 'tacos');
     const tortas = platillosArreglo.filter(tortas => tortas.getAttribute('data-platillo') === 'tortas');
-    mostrarPlatillos(burritos, gringas, tacos, tortas, platillosArreglo)
+    limpiarHtml(contenedorPlatillos)
+    burritos.forEach(burrito => contenedorPlatillos.appendChild(burrito))
+    mostrarPlatillos(burritos, gringas, tacos, tortas)
 }
-const mostrarPlatillos = (burritos, gringas, tacos, tortas, todos) => {
+const mostrarPlatillos = (burritos, gringas, tacos, tortas) => {
     btnBurritos.addEventListener('click', () => {
         limpiarHtml(contenedorPlatillos)
         burritos.forEach(burrito => contenedorPlatillos.appendChild(burrito))
@@ -69,11 +91,6 @@ const mostrarPlatillos = (burritos, gringas, tacos, tortas, todos) => {
         limpiarHtml(contenedorPlatillos)
         tortas.forEach(torta => contenedorPlatillos.appendChild(torta))
     });
-
-    btnTodos.addEventListener('click', () => {
-        limpiarHtml(contenedorPlatillos)
-        todos.forEach(todo => contenedorPlatillos.appendChild(todo))
-    })
 }
 const limpiarHtml = (contenedor) => {
     while (contenedor.firstChild) {
@@ -81,14 +98,3 @@ const limpiarHtml = (contenedor) => {
 
     }
 }
-//seccion videos, checar si funciona mejor luego
-// let videoBtn = document.querySelectorAll('.vid-btn');
-// videoBtn.forEach((btn) => {
-//     console.log('hey')
-//     btn.addEventListener('click', () => {
-//         document.querySelector('.controls .active').classList.remove('active');
-//         btn.classList.add('active');
-//         let src = btn.getAttribute('data-src');
-//         document.querySelector('#video-slider').src = src;
-//     });
-// });
