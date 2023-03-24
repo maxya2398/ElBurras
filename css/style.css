@@ -158,19 +158,19 @@ text-align: center;
     display: block;
     width: 30px;
     height: 30px;
-    border: none;
+    border: 1px solid;
     top: calc(50% - 35px);
     cursor: pointer;
     line-height: 30px;
     text-align: center;
     background: white;
-    color: black;
+    opacity: 50%;
   }
-  .carousel__anterior:hover, .carousel__siguiente:hover{
+   .carousel__anterior:hover, .carousel__siguiente:hover{
       opacity: 100%;
   }
   .carousel__anterior{
-      left: -5px;
+      left: -10px;
   }
   .carousel__siguiente{
     right: -5px;
@@ -179,11 +179,8 @@ text-align: center;
         overflow: hidden;
     }
     .carousel_elemento{
-        padding: 1rem;
+        margin: 1rem;
     }
-    /* .carousel_elemento img{
-        object-fit: fill;
-    } */
 /* IMAGENES FIN */
 
 
