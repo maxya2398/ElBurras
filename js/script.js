@@ -100,7 +100,19 @@ const limpiarHtml = (contenedor) => {
 }
 
 
-const card = document.querySelector('.card_inner');
-card.addEventListener('click', () => {
-    card.classList.toggle('is-flipped');
+const promocion1 = document.querySelector('.card_inner1');
+const promocion2 = document.querySelector('.card_inner2');
+const promocion3 = document.querySelector('.card_inner3');
+const promocion4 = document.querySelector('.card_inner4');
+promocion1.addEventListener('click', () => {
+    promocion1.classList.toggle('is-flipped');
+})
+promocion2.addEventListener('click', () => {
+    promocion2.classList.toggle('is-flipped');
+})
+promocion3.addEventListener('click', () => {
+    promocion3.classList.toggle('is-flipped');
+})
+promocion4.addEventListener('click', () => {
+    promocion4.classList.toggle('is-flipped');
 })
